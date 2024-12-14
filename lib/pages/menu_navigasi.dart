@@ -1,23 +1,34 @@
+// ignore_for_file: sort_child_properties_last, prefer_const_constructors, use_key_in_widget_constructors
+
 import 'package:flutter/material.dart';
-import 'akademik.dart'; // Pastikan file ini ada
-import 'kurikulum.dart'; // Pastikan file ini ada
-import 'pengumuman.dart'; // Pastikan file ini ada
-import 'tentang_informatika.dart'; // Pastikan file ini ada
+import 'profile_icon.dart'; // Impor ProfileIcon
+import 'akademik.dart';
+import 'kurikulum.dart';
+import 'pengumuman.dart';
+import 'tentang_informatika.dart';
 
 class MenuNavigasi extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: <Widget>[
-          _buildMenuButton(context, 'Akademik', AkademikPage()),
-          _buildMenuButton(context, 'Kurikulum', KurikulumPage()),
-          _buildMenuButton(context, 'Pengumuman', PengumumanPage()),
-          _buildMenuButton(context, 'Tentang Informatika', TentangInformatikaPage()),
-        ],
-      ),
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween, // Menyusun menu dan ikon profil
+      children: <Widget>[
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: <Widget>[
+              _buildMenuButton(context, 'Akademik', AkademikPage()),
+              _buildMenuButton(context, 'Kurikulum', KurikulumPage()),
+              _buildMenuButton(context, 'Pengumuman', PengumumanPage()),
+              _buildMenuButton(context, 'Tentang Informatika', TentangInformatikaPage()),
+            ],
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+          child: ProfileIcon(), // Menambahkan ProfileIcon di sini
+        ),
+      ],
     );
   }
 
@@ -33,7 +44,7 @@ class MenuNavigasi extends StatelessWidget {
         },
         child: Text(title),
         style: ElevatedButton.styleFrom(
-          foregroundColor: Colors.white, backgroundColor: Colors.blueAccent,
+          foregroundColor: Colors.white, backgroundColor: Colors.blueAccent, // Menggunakan onPrimary untuk warna teks
           padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(30),

@@ -1,3 +1,5 @@
+// ignore_for_file: library_private_types_in_public_api, use_key_in_widget_constructors
+
 import 'package:flutter/material.dart';
 
 class Header extends StatefulWidget {
@@ -6,12 +8,12 @@ class Header extends StatefulWidget {
 }
 
 class _HeaderState extends State<Header> {
-  double _height = 100;
+  double _height = 80;
 
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(seconds: 1), () {
+    Future.delayed(const Duration(seconds: 1), () {
       setState(() {
         _height = 100; // Mengubah tinggi untuk animasi
       });
@@ -21,14 +23,14 @@ class _HeaderState extends State<Header> {
   @override
   Widget build(BuildContext context) {
     return AnimatedContainer(
-      duration: Duration(seconds: 1),
+      duration: const Duration(seconds: 2),
       height: _height,
-      color: Colors.blue,
+      color: const Color.fromARGB(255, 255, 54, 242),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Image.asset('assets/logo.png', height: 50), // Pastikan logo ada di folder assets
-          Text(
+          const Text(
             '',
             style: TextStyle(color: Colors.white, fontSize: 28, fontWeight: FontWeight.bold),
           ),
