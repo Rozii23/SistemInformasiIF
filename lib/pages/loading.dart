@@ -1,7 +1,7 @@
 // ignore_for_file: unused_import, library_private_types_in_public_api
 
 import 'package:flutter/material.dart';
-import 'sign_in.dart';
+import 'sign_in.dart'; // Pastikan ini adalah jalur yang benar
 
 class LoadingScreen extends StatefulWidget {
   const LoadingScreen({super.key});
@@ -15,10 +15,10 @@ class _LoadingScreenState extends State<LoadingScreen> {
   void initState() {
     super.initState();
     // Menjalankan navigasi setelah delay
-    Future.delayed(Duration(seconds: 2), () {
+    Future.delayed(const Duration(seconds: 2), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => SignInPage()),
+        MaterialPageRoute(builder: (context) => SignInPage()), // Pastikan SignInPage tidak null
       );
     });
   }
@@ -31,7 +31,4 @@ class _LoadingScreenState extends State<LoadingScreen> {
       ),
     );
   }
-}
-
-SignInPage() {
 }

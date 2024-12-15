@@ -25,11 +25,12 @@ class _HeaderState extends State<Header> {
     return AnimatedContainer(
       duration: const Duration(seconds: 2),
       height: _height,
-      color: const Color.fromARGB(255, 255, 54, 242),
+      color: const Color.fromARGB(255, 238, 1, 255),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Image.asset('assets/logo.png', height: 50), // Pastikan logo ada di folder assets
+          const SizedBox(width: 10),
+          Image.asset('assets/logo.png', height: 60), // Pastikan logo ada di folder assets
           const Text(
             '',
             style: TextStyle(color: Colors.white, fontSize: 28, fontWeight: FontWeight.bold),
