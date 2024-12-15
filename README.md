@@ -2,6 +2,21 @@
 
 Kelompok 1
 - Fachrul Rozi Rangkuti
+    - Pages
+    1. Akademik Page
+    2. Home Page
+    3. Kurikulum Page
+    4. Loading Page
+    5. Menu Navigasi Page
+    6. Pengumuman Page
+    7. Profile Icon
+    8. Profile
+    9. Sign In Page
+    10. Sign Up page
+    11. Tentang Informatika Page
+    - Widgets
+    12. Footer
+    13. Header
 - Sunil Hukmi
 - Taufik Muhaimin
 
