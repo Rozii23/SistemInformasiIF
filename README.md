@@ -20,7 +20,10 @@ Kelompok 1
 - Sunil Hukmi
 - Taufik Muhaimin
   -page
-  1.halaman daftar dosen pengajar
+    . halaman informasi data dosen
+  
+  
+  
 
 ## Getting Started
 
