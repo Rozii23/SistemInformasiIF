@@ -14,6 +14,9 @@ dependencies:
   fluttertoast: ^8.0.9
   cupertino_icons: ^1.0.8
   image_picker: ^0.8.4+4 # Pastikan untuk menggunakan versi terbaru
+  postgres: ^2.3.2
+  sqflite: ^2.0.0+4
+  path: ^1.8.0
 
 dev_dependencies:
   flutter_test:
@@ -26,3 +29,4 @@ flutter:
   assets:
     - assets/logo.png
     - assets/pnl.png
+    - assets/bg.jpg
